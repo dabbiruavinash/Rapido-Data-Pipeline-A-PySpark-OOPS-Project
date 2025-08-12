@@ -1,0 +1,51 @@
+rapido_data_pipeline/
+├── configs/                         # Configuration files
+│   ├── kafka_config.json
+│   ├── spark_config.json
+│   └── aws_config.json
+├── docs/                            # Documentation
+│   └── architecture.md
+├── jobs/                            # Spark jobs
+│   ├── ingestion/                   # Bronze layer jobs
+│   │   ├── __init__.py
+│   │   ├── event_ingestor.py
+│   │   └── batch_ingestor.py
+│   ├── processing/                  # Silver layer jobs
+│   │   ├── __init__.py
+│   │   ├── ride_processor.py
+│   │   ├── driver_processor.py
+│   │   └── customer_processor.py
+│   └── curation/                   # Gold layer jobs
+│       ├── __init__.py
+│       ├── ride_analytics.py
+│       ├── driver_analytics.py
+│       └── customer_analytics.py
+├── models/                         # Data models
+│   ├── __init__.py
+│   ├── ride.py
+│   ├── driver.py
+│   ├── customer.py
+│   └── event.py
+├── pipelines/                      # Data pipelines
+│   ├── __init__.py
+│   ├── bronze_pipeline.py
+│   ├── silver_pipeline.py
+│   └── gold_pipeline.py
+├── services/                       # Service classes
+│   ├── __init__.py
+│   ├── kafka_service.py
+│   ├── spark_service.py
+│   ├── storage_service.py
+│   └── monitoring_service.py
+├── tests/                          # Unit tests
+│   ├── __init__.py
+│   ├── test_ingestion.py
+│   ├── test_processing.py
+│   └── test_curation.py
+├── utils/                          # Utility functions
+│   ├── __init__.py
+│   ├── logger.py
+│   ├── schema_utils.py
+│   └── date_utils.py
+├── main.py                         # Main entry point
+└── requirements.txt                # Python dependencies
